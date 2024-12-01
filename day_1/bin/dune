@@ -1,0 +1,3 @@
+(executable
+ (public_name aoc_d1)
+ (name main))
