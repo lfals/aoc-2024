@@ -38,7 +38,6 @@ func CountXmas(inputFilePath string) int {
 			if charIndex < len(chars)-3 {
 				text := char + strings.Join(chars[charIndex+1:charIndex+4], "")
 				if text == "XMAS" || text == "SAMX" {
-					println("Linha: ", lineIndex, charIndex, text)
 					totalXmas += 1
 				}
 			}
@@ -48,7 +47,6 @@ func CountXmas(inputFilePath string) int {
 				if lineIndex < len(lines)-3 {
 					text := char + lines[lineIndex+1][charIndex+1:charIndex+2] + lines[lineIndex+2][charIndex+2:charIndex+3] + lines[lineIndex+3][charIndex+3:charIndex+4]
 					if text == "XMAS" || text == "SAMX" {
-						println("direita: ", lineIndex, charIndex, text)
 
 						totalXmas += 1
 					}
@@ -59,7 +57,6 @@ func CountXmas(inputFilePath string) int {
 			if lineIndex < len(lines)-3 {
 				text := char + lines[lineIndex+1][charIndex:charIndex+1] + lines[lineIndex+2][charIndex:charIndex+1] + lines[lineIndex+3][charIndex:charIndex+1]
 				if text == "XMAS" || text == "SAMX" {
-					println("vertical: ", lineIndex, charIndex, text)
 
 					totalXmas += 1
 				}
@@ -70,7 +67,6 @@ func CountXmas(inputFilePath string) int {
 				if lineIndex < len(lines)-3 {
 					text := char + lines[lineIndex+1][charIndex-1:charIndex] + lines[lineIndex+2][charIndex-2:charIndex-1] + lines[lineIndex+3][charIndex-3:charIndex-2]
 					if text == "XMAS" || text == "SAMX" {
-						println("esquerda: ", lineIndex, charIndex, text)
 
 						totalXmas += 1
 					}
